@@ -9,4 +9,6 @@
 7. Install required packages "pip install -r requirements.txt"
 8. Create database in mysql "django_app" and make migration "python manage.py migrate"
 9. Make sure to add facebook key & facebook secret for facebook login, and also add google client id and secret key for google login in "settings.py"
-9. Run the server "python manage.py runserver"
+10. Run the server "python manage.py runserver"
+
+Note: also download redis for windows https://github.com/MicrosoftArchive/redis/releases "Redis-x64-3.2.100.msi"
