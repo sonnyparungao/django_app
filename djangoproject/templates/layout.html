@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Django App</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+	<style type="text/css">
+		.social-login-btn {
+		  margin: 5px;
+		  width: 15%;
+		  font-size: 250%;
+		  padding: 0;
+		}
+
+		.social-login-more {
+		  width: 45%;
+		}
+
+		.social-google {
+		  background-color: #da573b;
+		  border-color: #be5238;
+		}
+		.social-google:hover{
+		  background-color: #be5238;
+		  border-color: #9b4631;
+		}
+
+
+		.social-facebook {
+		  background-color: #4c699e;
+		  border-color: #47618d;
+		}
+		.social-facebook:hover {
+		  background-color: #47618d;
+		  border-color: #3c5173;
+		}
+
+
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<div class="container">
+				<a class="navbar-brand" href="/">Django App</a>
+		</div>  
+		{% if user.is_authenticated %}
+		<div class="nav navbar-nav navbar-right">
+               <a href="/logout" class="navbar-brand">Logout</a>
+        </div>
+        {% endif %}
+	</nav>
+    <div class="container">
+	    {% block content %}	
+	    {% endblock content %}
+    </div>
+</body>
+</html>
