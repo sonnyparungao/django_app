@@ -31,13 +31,15 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-     'tictactoe',
+     
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
+    'tictactoe',
     'social_django', 
      
 ]
@@ -159,3 +161,14 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'QB-WCeTMCZD2M_u7o1W4EAp1' #Paste Secret Key
 
 SOCIAL_AUTH_FACEBOOK_KEY = '940976115981327'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '0376eef9b4caaa55c98ed833623d3994'  # App Secret
+
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'asgi_redis.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('localhost', 6379)],
+        },
+        'ROUTING': 'djangoproject.routing.channel_routing',
+    }
+}

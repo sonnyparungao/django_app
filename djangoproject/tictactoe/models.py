@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 from datetime import datetime
 
@@ -15,3 +16,6 @@ class tictactoe(models.Model):
 		verbose_name_plural = "Tictactoe Game Result"
 
 
+class LoggedInUser(models.Model):
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL, related_name='logged_in_user')
