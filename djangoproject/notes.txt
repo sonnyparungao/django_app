@@ -1,0 +1,19 @@
+Hi Sir Ross,
+
+Here's the app details:
+
+- login via social media
+- tictactoe using reactjs
+
+Home - "localhost:8000"
+Login - "localhost:8000/login"
+Tictactoe Game - "localhost:8000/tictactoe"
+
+Django built in Admin Panel
+
+
+Missing part is the PVP for the tictactoe game using websocket.
+
+I just have limited time to do this app, since I'm really loaded in my work right now.
+I did stopped on the module for checking who's user is online and offline "localhost:8000/tictactoe/users" so thats it.
+Anyways I've learned that python is really  something that i should learn, a high level language for rapid development.
